@@ -22,7 +22,7 @@ Imagine you have a multiclass classifier analyzing matrices that represent digit
 ```
 ...
 results = []
-for image in mnist_images_sevenss:
+for image in mnist_images_sevens:
   results.append(classifier.Classify(image))
 print(results[:5])
 ```
