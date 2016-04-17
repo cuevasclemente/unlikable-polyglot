@@ -1,0 +1,19 @@
+#!/usr/bin/awk -f
+{
+  counts[$1]++;
+  len++
+}
+END {
+  p = 0.0
+  l = 0.0
+  for (i in counts) {
+    l++
+    pi = (counts[i])/len;
+    p += pi*pi
+  }
+  if(l == len) {
+    print(1.0)
+  } else {
+    print(1-p)
+  }
+}
